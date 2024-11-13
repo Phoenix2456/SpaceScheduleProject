@@ -19,14 +19,18 @@ def main():
     print_docking_bays()
     print_incoming_ships()
     
+
     # Level 1
+    # Creat a for loop for each dictionary list in docking_bays and incoming_ships
+    
     for bay in db.docking_bays:
         for ship in db.incoming_ships:
-            if bay['size'] == ship['size']:
+            # if size from bay equals to size of ship, print true or false
+            if bay['size'] == ship['size']: 
                 return True
             return False
+                # Extra try
                 # print(f"Bay {bay['bay_id']}: {ship['ship_name']} - Size: {bay['size']}")
-    # This function does 
 
 
     # Level 2
