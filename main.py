@@ -23,10 +23,24 @@ def main():
     for bay in db.docking_bays:
         for ship in db.incoming_ships:
             if bay['size'] == ship['size']:
-                print(f"Bay {bay['bay_id']}: {ship['ship_name']} - Size: {bay['size']}")
+                return True
+            return False
+                # print(f"Bay {bay['bay_id']}: {ship['ship_name']} - Size: {bay['size']}")
     # This function does 
 
+
     # Level 2
+    for bay in db.docking_bays:
+        for ship in db.incoming_ships:
+            if ship['arrival_time'] == bay['schedule']:
+                return True
+            return False
+                # print(f"Ship: {ship['ship_name']}; Arrival: {ship['arrival_time']} - Depart: {ship['departure_time']}")
+    # Level 3
+    for bay in db.docking_bays:
+        for ship in db.incoming_ships:
+            print(f"Ship: {ship['ship_name']}; Arrival: {ship['arrival_time']} - Depart: {ship['departure_time']}")
+
 
 
     # TODO: Implement the docking scheduler logic here
