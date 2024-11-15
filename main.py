@@ -20,25 +20,29 @@ def main():
     print_incoming_ships()
     
     # Level 1
-    # Prints out each list from the docking bay function and from incoming ship function
+    print("\n Ship bays by size: ")
+    # Using the For Loop function to print out each list from the docking bay function and from incoming ship function
     for bay in db.docking_bays: 
         for ship in db.incoming_ships:
-            # Using the if statement to check which bay id size correspond with the ship sizes
+            # Using the if statement to check which bay id size correspond with which ship sizes
             if bay['size'] == ship['size']:
-                return True
-            return False
-                # print(f"Bay {bay['bay_id']}: {ship['ship_name']} - Size: {bay['size']}")
-    # This function does 
+                # Printing out the list of bay number according to thier sizes
+                print(f"Bay {bay['bay_id']}: {ship['ship_name']} - Size: {bay['size']}")
+ 
 
 
     # Level 2
+    print("\nShip Time: ")
+    # Using the For Loop function to print out each list from the docking bay function and from incoming ship function
     for bay in db.docking_bays:
         for ship in db.incoming_ships:
+            # Using the for loop again to take in each list from arrival time in the ship list, and each list from schedule in the bay list
             for arrival in ship['arrival_time']:
                 return arrival
             for schedule in bay['schedule']:
                 return schedule
             if arrival == schedule:
+                # 
                 print(f"{ship['ship_name']}: Arrives at {arrival}, and Departes at {ship['departure_time']}")
 
     # Level 3
