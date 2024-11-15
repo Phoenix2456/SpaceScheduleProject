@@ -41,8 +41,9 @@ def main():
                 return arrival
             for schedule in bay['schedule']:
                 return schedule
-            if arrival == schedule:
-                # 
+                # Using the if statement to check which time from ship and from bay corresponds with each other
+            if bay['schedule'] == ship['arrival_time']:
+                # Using the print statement to print out a list of ships 
                 print(f"{ship['ship_name']}: Arrives at {arrival}, and Departes at {ship['departure_time']}")
 
     # Level 3
