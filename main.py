@@ -28,6 +28,7 @@ def main():
             if bay['size'] == ship['size']:
                 # Printing out the list of bay number according to thier sizes
                 print(f"Bay {bay['bay_id']}: {ship['ship_name']} - Size: {bay['size']}")
+                print()
  
 
 
